@@ -1,0 +1,10 @@
+# DEMO ONLY - each service pins a PHP runtime exposed to CVE-2026-109618 / CVE-2026-109619.
+services:
+  web-fpm:
+    image: php:8.3.10-fpm      # exposed: below 8.3.36
+  web-legacy:
+    image: php:7.4-fpm         # exposed: 7.4 has no official fix
+  web-apache:
+    build: .                   # exposed: see Dockerfile (8.2.20, below 8.2.35)
+    ports:
+      - "8080:80"
