@@ -1,0 +1,12 @@
+{
+  "name": "demo/php2shell-exposure",
+  "description": "DEMO ONLY - allows and pins PHP runtimes exposed to CVE-2026-109618 / CVE-2026-109619",
+  "require": {
+    "php": ">=7.4"
+  },
+  "config": {
+    "platform": {
+      "php": "8.1.0"
+    }
+  }
+}
